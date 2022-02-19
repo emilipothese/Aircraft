@@ -1,12 +1,30 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+.navbar-light {
+  background-color: $yellow;
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  .navbar-brand {
+    color: $velvet;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  .nav-item {
+    margin-top: 10px;
+  }
+
+  @media (min-width: 992px) {
+    .nav-item {
+      margin-top: 0px;
+      margin-left: 10px;
+    }
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-toggler {
+    border: 1px solid $velvet;
+  }
+
+  .navbar-nav .nav-link {
+    color: $velvet;
+  }
 }
