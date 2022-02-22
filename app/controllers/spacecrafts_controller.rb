@@ -51,6 +51,6 @@ class SpacecraftsController < ApplicationController
   end
 
   def spacecraft_params
-    params.require(:spacecraft).permit(:name, :capacity, :type, :location, :description, :user)
+    params.require(:spacecraft).permit(:name, :capacity, :category, :location, :description, :user)
   end
 end
