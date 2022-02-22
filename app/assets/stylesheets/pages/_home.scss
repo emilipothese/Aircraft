@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.card-home {
+  background-image: asset-url('gino-0gTtEsOBJDo-unsplash.jpg');
+  background-size: cover;
+  padding: 250px 0px 50px 0px;
+  text-align: center;
+
+  h1 {
+    color: #fff;
+  }
+}
