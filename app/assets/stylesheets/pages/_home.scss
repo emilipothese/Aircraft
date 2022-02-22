@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.card-home {
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset-url('nasa-yZygONrUBe8-unsplash.jpg');
+  background-size: cover;
+  padding: 275px 0px 50px 0px;
+  text-align: center;
+
+  h1 {
+    color: #fff;
+  }
+}

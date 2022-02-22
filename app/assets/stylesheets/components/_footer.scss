@@ -1,0 +1,12 @@
+footer {
+  background: $velvet;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+
+  span {
+    color: $yellow;
+  }
+}
