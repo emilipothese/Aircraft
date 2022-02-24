@@ -6,5 +6,10 @@ Rails.application.routes.draw do
     member do
       get :user
     end
+    resources :bookings, only: [:new, :create]
+  end
+
+  resources :users do
+    resources :bookings, only: [:show]
   end
 end
