@@ -11,6 +11,8 @@
   <%= f.text_field :description %>
   <%= f.label :user %>
   <%= f.text_field :user %>
+  <%= f.label :photo %>
+  <%= f.input :photo, as: :file %>
   # ici il faudrait plutot aller chercher le "current_user" pour
   # l'inserer automatiquement dans le dans le field user ou
   # l'enregistrer automatiquement lors d'un nouvel enregistrement
