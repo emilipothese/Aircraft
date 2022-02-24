@@ -10,9 +10,9 @@ Spacecraft.destroy_all
 User.destroy_all
 
 puts "Creating users..."
-fanny = {email: 'bof@gmail.com', password: 'fannycouccou90'}
-emilie = {email: 'ed@gmail.com', password: 'emiliejolie'}
-camille = {email: 'ch@gmail.com', password: 'camillelachenille'}
+fanny = {email: 'bof@gmail.com', password: 'fannycouccou90', nickname:'fannycouccou90'}
+emilie = {email: 'ed@gmail.com', password: 'emiliejolie', nickname: 'emiliejolie'}
+camille = {email: 'ch@gmail.com', password: 'camillelachenille', nickname: 'camillelachenille'}
 users = []
 [ fanny, emilie, camille ].each do |attributes|
   user = User.create!(attributes)
