@@ -5,7 +5,6 @@
 <p><%= @spacecraft.description %></p>
 <p><%= @spacecraft.user %></p>
 
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<%# <%= cl_image_tag @spacecraft.photo.key, height: 300, width: 400, crop: :fill %>
 
 <p><%= link_to 'Book this spacecraft', new_spacecraft_booking_path(@spacecraft) %></p>
-
