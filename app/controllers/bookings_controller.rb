@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     # we need `spacecraft_id` to associate booking with corresponding restaurant
-    @spacecraft = Restaurant.find(params[:spacecraft_id])
+    @spacecraft = Spacecraft.find(params[:spacecraft_id])
     @booking.spacecraft = @spacecraft
     if @booking.save
       redirect_to spacecraft_path(@spacecraft)
