@@ -2,7 +2,8 @@
   <h1 class="mb-5"><%= @spacecraft.name %></h1>
   <div class="row">
     <div class="col-12 col-md-8">
-      <h2>Description</h2>
+      <%= image_tag("space-shuttle.jpg", size: "600x480") %>
+      <h2 class="mt-4">Description</h2>
       <p><%= @spacecraft.description %></p>
 
       <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_booking_path(@spacecraft) %>">Book this spacecraft</a>
