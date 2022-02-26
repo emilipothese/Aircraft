@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           Aircraft <i class="fa-solid fa-rocket"></i>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">See all spacecrafts</a>
+              <a class="nav-link" href="<%= spacecrafts_path %>">See all spacecrafts</a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-outline-success" type="button">Become owner</button>
+              <a class="btn btn-outline-success" type="button" href="<%= new_user_session_path %>">Become owner</a>
             </li>
             <li class="nav-item">
-              <button class="btn btn-outline-danger" type="button"> <i class="fa-solid fa-user-large"></i> Sign in</button>
+              <a class="btn btn-outline-danger" type="button" href="<%= new_user_session_path %>"><i class="fa-solid fa-user-large"></i> Sign in</a>
             </li>
           </ul>
         </div>

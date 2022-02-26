@@ -10,6 +10,7 @@ Spacecraft.destroy_all
 User.destroy_all
 
 puts "Creating users..."
+
 fanny = {email: 'bof@gmail.com', password: 'fannycouccou90', nickname: 'fafa'}
 emilie = {email: 'ed@gmail.com', password: 'emiliejolie', nickname: 'emiliejolie'}
 camille = {email: 'ch@gmail.com', password: 'camillelachenille', nickname: 'camillelachenille'}
