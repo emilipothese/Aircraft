@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_174840) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_date"
@@ -51,7 +52,6 @@ ActiveRecord::Schema.define(version: 2022_02_24_174840) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["spacecraft_id"], name: "index_bookings_on_spacecraft_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
-
   end
 
   create_table "spacecrafts", force: :cascade do |t|
@@ -79,12 +79,9 @@ ActiveRecord::Schema.define(version: 2022_02_24_174840) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-
   add_foreign_key "bookings", "spacecrafts"
   add_foreign_key "bookings", "users"
-
   add_foreign_key "spacecrafts", "users"
 end
