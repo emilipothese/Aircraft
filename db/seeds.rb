@@ -21,7 +21,7 @@ camille = {email: 'ch@gmail.com', password: 'camillelachenille', nickname: 'cami
 end
 
 puts "Creating spacecraft..."
-columbia = { name: 'Columbia', capacity: 7, category: 'Space Shuttle', location: 'Cape Canaveral', description: 'US Space Shuttle for ISS accostal and Earth orbiting', user: User.find_by(email: 'bof@gmail.com') }
+columbia = { name: 'Columbia', capacity: 7, category: 'Space Shuttle', location: 'Cape Canaveral', description: 'US Space Shuttle for ISS accostal and Earth orbiting', user: User.find_by(email: 'bof@gmail.com')}
 
 tardis = { name: 'TARDIS', capacity: 7, category: 'Personal spacecraft', location: 'Gallifrey', description: 'The TARDIS is a time machine and spacecraft', user: User.find_by(email: 'ed@gmail.com') }
 
