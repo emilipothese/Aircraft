@@ -1,4 +1,6 @@
-<%= simple_form_for(@spacecraft) do |f| %>
+<div class="container">
+  <h1>Create a spacecraft</h1>
+  <%= simple_form_for(@spacecraft) do |f| %>
   <%= f.input :name %>
   <%= f.input :capacity %>
   <%= f.input :category %>
@@ -11,3 +13,4 @@
   # l'enregistrer automatiquement lors d'un nouvel enregistrement
   <%= f.submit %>
 <% end %>
+</div>
