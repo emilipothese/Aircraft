@@ -1,10 +1,3 @@
-<ul>
-  <% @spacecrafts.each do |spacecraft| %>
-    <li><%= spacecraft.name %></li>
-    <li><%= spacecraft.capacity %></li>
-    <li><%= spacecraft.category %></li>
-  <% end %>
-</ul>
 
 <div class="container">
   <h1>Voici nos plus beaux vaisseaux!</h1>
@@ -16,17 +9,18 @@
 
   <div class="row">
     <% @spacecrafts.each do |spacecraft| %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <div class="co-12 col-sm-6 col-md-4 mb-3">
+      <div class="card mr-2">
+      <div class="col-12 col-sm-6 col-md-4 mb-3">
+        <div class="card-body" style="width: 18rem;">
+            <%= cl_image_tag "#{spacecraft.photo}" %>
             <%= link_to spacecraft_path(spacecraft), class:'text-decoration-none' do %>
-              <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('space-shuttle.jpg') %>)">
                 <%= spacecraft.name %>
-              </div>
+                <%= spacecraft.capacity %>
+                <%= spacecraft.category %>
             <% end %>
           </div>
+          </div>
         </div>
-      </div>
     <% end %>
-  </div>
+      </div>
 </div>

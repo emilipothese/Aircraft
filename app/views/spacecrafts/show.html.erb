@@ -10,10 +10,14 @@
     <div class="col-12 col-md-4">
       <div class="bg-info p-3">
         <h2>Info</h2>
-        <p><i class="fa-solid fa-shuttle-space"></i> Category :<b><%= @spacecraft.category %></b></p>
+        <p><i class="fa-solid fa-shuttle-space"></i> Category : <b><%= @spacecraft.category %></b></p>
         <p><i class="fa-solid fa-users"></i> Capacity : <b><%= @spacecraft.capacity %></b></p>
         <p><i class="fa-solid fa-location-dot"></i> Location : <b><%= @spacecraft.location %></b></p>
         <p><i class="fa-solid fa-user-astronaut"></i> Capitain : <b><%= @spacecraft.user.nickname %></b></p>
+
+        <% if user_signed_in? && current_user == @spacecraft.user%>
+          <a class="btn btn-outline-success" type="button" href="<%= edit_spacecraft_path(@spacecraft) %>">Edit my spacecraft</a>
+        <% end %>
       </div>
     </div>
   </div>
