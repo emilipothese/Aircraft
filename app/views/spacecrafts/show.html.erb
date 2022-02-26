@@ -1,11 +1,21 @@
-<h2><%= @spacecraft.name %></h2>
-<p><%= @spacecraft.capacity %></p>
-<p><%= @spacecraft.category %></p>
-<p><%= @spacecraft.location %></p>
-<p><%= @spacecraft.description %></p>
-<p><%= @spacecraft.user %></p>
+<div class="container">
+  <h1 class="mb-5"><%= @spacecraft.name %></h1>
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h2>Description</h2>
+      <p><%= @spacecraft.description %></p>
 
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+      <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_booking_path(@spacecraft) %>">Book this spacecraft</a>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="bg-info p-3">
+        <h2>Info</h2>
+        <p><i class="fa-solid fa-shuttle-space"></i> Category :<b><%= @spacecraft.category %></b></p>
+        <p><i class="fa-solid fa-users"></i> Capacity : <b><%= @spacecraft.capacity %></b></p>
+        <p><i class="fa-solid fa-location-dot"></i> Location : <b><%= @spacecraft.location %></b></p>
+        <p><i class="fa-solid fa-user-astronaut"></i> Capitain : <b><%= @spacecraft.user.nickname %></b></p>
+      </div>
+    </div>
+  </div>
 
-<p><%= link_to 'Book this spacecraft', new_spacecraft_booking_path(@spacecraft) %></p>
-
+</div>
