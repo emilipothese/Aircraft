@@ -10,22 +10,22 @@ Spacecraft.destroy_all
 User.destroy_all
 
 puts "Creating users..."
-fanny = {email: 'bof@gmail.com', password: 'fannycouccou90', nickname:'fannycouccou90'}
+
+fanny = {email: 'bof@gmail.com', password: 'fannycouccou90', nickname: 'fafa'}
 emilie = {email: 'ed@gmail.com', password: 'emiliejolie', nickname: 'emiliejolie'}
 camille = {email: 'ch@gmail.com', password: 'camillelachenille', nickname: 'camillelachenille'}
-users = []
+
 [ fanny, emilie, camille ].each do |attributes|
   user = User.create!(attributes)
-  users << user
   puts "Created #{user.email}"
 end
 
 puts "Creating spacecraft..."
-columbia = { name: 'Columbia', capacity: 7, category: 'Space Shuttle', location: 'Cape Canaveral', description: 'US Space Shuttle for ISS accostal and Earth orbiting', user: users[0] }
+columbia = { name: 'Columbia', capacity: 7, category: 'Space Shuttle', location: 'Cape Canaveral', description: 'US Space Shuttle for ISS accostal and Earth orbiting', user: User.find_by(email: 'bof@gmail.com') }
 
-tardis = { name: 'TARDIS', capacity: 7, category: 'Personal spacecraft', location: 'Gallifrey', description: 'The TARDIS is a time machine and spacecraft', user: users[1] }
+tardis = { name: 'TARDIS', capacity: 7, category: 'Personal spacecraft', location: 'Gallifrey', description: 'The TARDIS is a time machine and spacecraft', user: User.find_by(email: 'ed@gmail.com') }
 
-millenium_falcon = { name: 'Millennium Falcon', capacity: 10, category: 'smuggling ship', location: 'Republic City', description: 'The Millennium Falcon was  a YT-1300 light freifhter of the YT-1300f variety.', user: users[2] }
+millenium_falcon = { name: 'Millennium Falcon', capacity: 10, category: 'smuggling ship', location: 'Republic City', description: 'The Millennium Falcon was  a YT-1300 light freifhter of the YT-1300f variety.', user: User.find_by(email: 'ch@gmail.com') }
 
 [ columbia, tardis, millenium_falcon ].each do |attributes|
   spacecraft = Spacecraft.create!(attributes)
