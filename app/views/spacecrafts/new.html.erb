@@ -1,23 +1,12 @@
 <div class="container">
-  <h1>Create a spacecraft</h1>
-  <%= form_for(@spacecraft) do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :capacity %>
-    <%= f.number_field :capacity %>
-    <%= f.label :category %>
-    <%= f.text_field :category %>
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-    <%= f.label :user %>
-    <%= f.text_field :user %>
-    <%= f.label :photo %>
-    <%= f.text_field :photo, as: :file %>
-    # ici il faudrait plutot aller chercher le "current_user" pour
-    # l'inserer automatiquement dans le dans le field user ou
-    # l'enregistrer automatiquement lors d'un nouvel enregistrement
-    <%= f.submit %>
+  <h1 class="mb-5">Create a spacecraft</h1>
+  <%= simple_form_for (@spacecraft) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :capacity %>
+    <%= f.input :category %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Add a spaceship", class: "btn btn-success" %>
   <% end %>
 </div>
