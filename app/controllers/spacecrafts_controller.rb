@@ -7,6 +7,14 @@ class SpacecraftsController < ApplicationController
 
   def index
     @spacecrafts = Spacecraft.all
+
+    @markers = @spacecrafts.map do |spacecraft|
+      {
+        lat: spacecraft.latitude,
+        lng: spacecraft.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { spacecraft: spacecraft })
+      }
+    end
   end
 
   def show
