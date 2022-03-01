@@ -18,6 +18,7 @@ class SpacecraftsController < ApplicationController
   end
 
   def show
+    @spacecrafts = Spacecraft.all
   end
 
   def new
