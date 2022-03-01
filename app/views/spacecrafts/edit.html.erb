@@ -1,13 +1,15 @@
 <div class="container">
-  <h1 class="mb-5">Edit <%= @spacecraft.name %></h1>
-
-  <%= simple_form_for (@spacecraft) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :capacity %>
-  <%= f.input :category %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Edit spaceship", class: "btn btn-success" %>
-  <% end %>
+  <div class="row">
+    <div class="col-12 col-md-8 offset-lg-3">
+        <h1 class="mb-1">Modification </h1>
+          <p><%= @spacecraft.name %></p>
+          <%= simple_form_for (@spacecraft) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :capacity %>
+          <%= f.input :category %>
+          <%= f.input :location %>
+          <%= f.input :description %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit "Edit spaceship", class: "btn btn-success" %>
+          <% end %>
 </div>
