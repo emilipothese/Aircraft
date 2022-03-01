@@ -7,6 +7,7 @@
       <p><%= @spacecraft.description %></p>
       <% if current_user != @spacecraft.user%>
         <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_booking_path(@spacecraft) %>">Book this spacecraft</a>
+        <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_review_path(@spacecraft) %>">Leave a review</a>
       <% end %>
     </div>
     <div class="col-12 col-md-4">
