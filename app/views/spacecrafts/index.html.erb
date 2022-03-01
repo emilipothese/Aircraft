@@ -7,8 +7,7 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <%= image_tag("space-shuttle.jpg", class: "img-fluid rounded-start img-cover") %>
-            </div>
+              <%= cl_image_tag "#{spacecraft.photo.key}", size: "160x120" %>            </div>
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title"><%= spacecraft.name %></h5>

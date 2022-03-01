@@ -37,6 +37,7 @@ class SpacecraftsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
