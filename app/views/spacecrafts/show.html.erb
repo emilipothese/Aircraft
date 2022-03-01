@@ -9,6 +9,20 @@
       <p><%= @spacecraft.description %></p>
 
       <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_booking_path(@spacecraft) %>">Book this spacecraft</a>
+
+      <h3>Reviews</h3>
+      <p><ul class="list-group">
+      <% @spacecraft.reviews.each do |review| %>
+      <li class="list-group-item">
+        <%= review.content %>
+        <%= link_to "Remove",
+                  review_path(review),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+      </li>
+      <% end %>
+      </ul></p>
+
     </div>
     <div class="col-12 col-md-4">
       <div class="bg-info p-3">
@@ -24,5 +38,10 @@
       </div>
     </div>
   </div>
+
+<%= link_to 'Edit', edit_spacecraft_path(@spacecraft) %>
+<%= link_to 'Back', spacecrafts_path %> |
+<%= link_to 'Leave a review', new_spacecraft_review_path(@spacecraft) %>
+
 
 </div>
