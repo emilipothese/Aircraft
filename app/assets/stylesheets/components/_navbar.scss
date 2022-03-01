@@ -27,4 +27,9 @@
   .navbar-nav .nav-link {
     color: $velvet;
   }
+
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
 }

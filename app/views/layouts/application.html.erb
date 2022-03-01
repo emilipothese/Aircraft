@@ -10,7 +10,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <script src="https://kit.fontawesome.com/3113b7a40f.js" crossorigin="anonymous"></script>
   </head>
@@ -30,21 +29,23 @@
               <a class="nav-link" href="<%= spacecrafts_path %>">See all spacecrafts</a>
             </li>
             <% if user_signed_in? %>
-            <li class="nav-item">
-              <a class="nav-link" href="<%= spacecrafts_path %>">Hello <%= current_user.nickname %></a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_path %>">Add a spacecraft</a>
-            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle rounded-circle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-user-large"></i> <%= current_user.nickname %> </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="<%= new_spacecraft_path %>">Add a spacecraft</a></li>
+                 <li><a class="dropdown-item" href="#">View my reservations</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"dropdown-item"%></li>
+               </ul>
+             </li>
 
-            <li class="nav-item">
-
-              <a class="btn btn-outline-danger" type="button" href="<%= destroy_user_session_path %>"><i class="fa-solid fa-user-large"></i> Log out</a>
-            </li>
             <% else %>
-            <li class="nav-item">
-              <a class="btn btn-outline-danger" type="button" href="<%= new_user_session_path %>"><i class="fa-solid fa-user-large"></i> Sign in</a>
-            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle rounded-circle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><i class="fa-solid fa-user-large"></i></a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="<%= new_user_session_path %>">Sign in</a></li>
+               </ul>
+             </li>
             <% end %>
           </ul>
         </div>
