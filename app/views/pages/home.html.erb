@@ -1,39 +1,40 @@
-<div class="container card-home">
+<div class="card-home">
   <h1>Besoin d'un vaisseau pour conquérir l'univers ?</h1>
   <a class="btn btn-success" type="button" href="<%= spacecrafts_path %>">Tenter de conquérir le monde</a>
 </div>
 
-<%# <div class="container">
-  <h2>Les meilleurs vaisseaux</h2>
+<div class="container mt-5">
+  <h2 class="mb-3">Les meilleurs vaisseaux</h2>
   <div class="row">
     <div class="col-6 col-sm-4">
       <div class="card" style="width: 18rem;">
+        <%= image_tag("space-shuttle.jpg", class: "card-img-top") %>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-success">Go somewhere</a>
+          <h5 class="card-title">Millennium Falcon</h5>
+          <p class="card-text">The Millennium Falcon was a YT-1300 light freifhter of the YT-1300f variety.</p>
+          <a href="/spacecrafts/9" class="btn btn-success">Voir le détail</a>
         </div>
       </div>
     </div>
 
     <div class="col-12 col-sm-4">
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <%= image_tag("space-shuttle.jpg", class: "card-img-top") %>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-success">Go somewhere</a>
+          <h5 class="card-title">USS Enterprise</h5>
+          <p class="card-text">The USS Enterprise (NCC-1701) was a 23rd century Federation Constitution-class starship...</p>
+          <a href="/spacecrafts/10" class="btn btn-success">Voir le détail</a>
         </div>
       </div>
     </div>
 
     <div class="col-6 col-sm-4">
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <%= image_tag("space-shuttle.jpg", class: "card-img-top") %>
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-success">Go somewhere</a>
+          <h5 class="card-title">Nautilus</h5>
+          <p class="card-text">Nautilus is described by Verne as "a masterpiece containing masterpieces".</p>
+          <a href="/spacecrafts/13" class="btn btn-success">Voir le détail</a>
         </div>
       </div>
     </div>

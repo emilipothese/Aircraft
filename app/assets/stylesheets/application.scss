@@ -18,9 +18,13 @@ body {
 }
 
 main {
-  padding: 20px 0;
+  padding: 0 0 20px 0;
 
   .container {
     margin: 30px auto 100px auto;
+  }
+
+  h1  {
+    padding-top: 50px;
   }
 }
