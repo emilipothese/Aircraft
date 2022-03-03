@@ -24,13 +24,14 @@ class SpacecraftsController < ApplicationController
   def new
     # @user = User.find(params[:user_id])
     @spacecraft = Spacecraft.new # to initialize the form
+    @spacecrafts = Spacecraft.where(user_id: current_user)
   end
 
   def create
     @spacecraft = Spacecraft.new(spacecraft_params)
-    @spacecraft.save
+    @spacecraft.user = current_user
     if @spacecraft.save
-      redirect_to spacecraft_path(@spacecraft)
+      redirect_to new_spacecraft_path(@spacecraft)
     else
       render :new
     end
@@ -48,10 +49,11 @@ class SpacecraftsController < ApplicationController
   end
 
   def destroy
+    @spacecraft = Spacecraft.find(set_spacecraft)
     @spacecraft.destroy
 
     # no need for app/views/restaurants/destroy.html.erb
-    redirect_to spacecraft_path
+    redirect_to spacecraft_path#(@spacecraft.review)
   end
 
   private
