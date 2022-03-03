@@ -49,10 +49,11 @@ class SpacecraftsController < ApplicationController
   end
 
   def destroy
+    @spacecraft = Spacecraft.find(set_spacecraft)
     @spacecraft.destroy
 
     # no need for app/views/restaurants/destroy.html.erb
-    redirect_to spacecraft_path
+    redirect_to spacecraft_path#(@spacecraft.review)
   end
 
   private
