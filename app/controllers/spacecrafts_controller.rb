@@ -31,7 +31,7 @@ class SpacecraftsController < ApplicationController
     @spacecraft = Spacecraft.new(spacecraft_params)
     @spacecraft.user = current_user
     if @spacecraft.save
-      redirect_to new_spacecraft_path(@spacecraft)
+      redirect_to spacecrafts_path(@spacecraft)
     else
       render :new
     end

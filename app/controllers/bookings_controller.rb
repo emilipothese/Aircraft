@@ -9,6 +9,7 @@ class BookingsController < ApplicationController
     # we need `spacecraft_id` to associate booking with corresponding restaurant
     @spacecraft = Spacecraft.find(params[:spacecraft_id])
     @booking.spacecraft = @spacecraft
+    @booking.user = current_user
     if @booking.save
       redirect_to spacecraft_path(@spacecraft)
     else
