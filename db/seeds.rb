@@ -71,6 +71,29 @@ nautilus.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 nautilus.save!
 puts "✅ nautilus"
 
+puts "Creating reviews..."
+
+review1 = Review.new(spacecraft_id: nautilus.id, content: "Very nice engine and lovely flight. I highly recommend!")
+review1.save!
+puts "✅ review1"
+
+review2 = Review.new(spacecraft_id: columbia.id, content: "What an amazing space shuttle! So powerful, it's quite frightening...")
+review2.save!
+puts "✅ review2"
+
+review3 = Review.new(spacecraft_id: columbia.id, content: "I did enjoyed this spacecraft even though 7 people might be a little tight.")
+review3.save!
+puts "✅ review3"
+
+review4 = Review.new(spacecraft_id: tardis.id, content: "Well this is unexepcted...")
+review4.save!
+puts "✅ review4"
+
+review5 = Review.new(spacecraft_id: tardis.id, content: "I enjoyed navigating this - should I coall it space - craft! It is very amusing and the kids laughed the whole way :)")
+review5.save!
+puts "✅ review5"
+
+
 # fanny = {email: 'bof@gmail.com', password: 'fannycouccou90', nickname: 'fafa'}
 
 # [ fanny, emilie, camille, kirk, rick, henri, nemo ].each do |attributes|
