@@ -9,7 +9,7 @@
 
   <div class="row">
     <% @spacecrafts.last(3).each do |spacecraft| %>
- <div class="col-md-4"><div class="card-cool text-white card-has-bg click-col" style="background-image:url('<%= cl_image_path "#{spacecraft.photo.key}"%>'); background-size: cover;">
+ <div class="col-md-4"><div class="card text-white card-has-bg click-col" style="background-image:url('<%= cl_image_path "#{spacecraft.photo.key}"%>'); background-size: cover;">
        <%= cl_image_tag "#{spacecraft.photo.key}", class: "card-img d-none" %>
         <div class="card-img-overlay d-flex flex-column">
          <div class="card-body">
