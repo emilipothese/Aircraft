@@ -2,6 +2,15 @@ class BookingsController < ApplicationController
   def new
     @spacecraft = Spacecraft.find(params[:spacecraft_id])
     @booking = Booking.new
+    @bookings = Booking.where(user_id: current_user)
+  end
+
+  def user
+    @user = @booking.user
+  end
+
+  def index
+    @bookings = Booking.all
   end
 
   def create
