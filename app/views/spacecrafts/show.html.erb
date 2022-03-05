@@ -8,10 +8,10 @@
       <p><%= @spacecraft.description %></p>
       <% if user_signed_in? && current_user != @spacecraft.user%>
         <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_booking_path(@spacecraft) %>">Book this spacecraft</a>
-        <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_review_path(@spacecraft) %>">Leave a review</a>
       <% end %>
 
-      <h3>Reviews</h3>
+      <hr class="my-5">
+      <h2>Reviews</h2>
       <p><ul class="list-group">
       <% @spacecraft.reviews.each do |review| %>
       <li class="list-group-item">
@@ -19,6 +19,9 @@
       </li>
       <% end %>
       </ul></p>
+      <% if user_signed_in? && current_user != @spacecraft.user%>
+        <a class="btn btn-outline-success" type="button" href="<%= new_spacecraft_review_path(@spacecraft) %>">Leave a review</a>
+      <% end %>
     </div>
     <div class="col-12 col-md-4">
       <div class="bg-info p-3">
