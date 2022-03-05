@@ -35,13 +35,13 @@ columbia.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 columbia.save!
 puts "✅ columbia"
 
-file = URI.open('https://res.cloudinary.com/dfei5iavr/image/upload/v1645884048/rick-and-morty-adult-swim-cartoon-gray-wallpaper_zulk97.jpg')
+file = URI.open('https://res.cloudinary.com/dfei5iavr/image/upload/v1645884058/tardis-doctor-who_kurwpl.webp')
 tardis = Spacecraft.new(name: 'TARDIS', capacity: 7, category: 'Personal spacecraft', location: 'Gallifrey', description: 'The TARDIS is a time machine and spacecraft', user: User.find_by(email: 'ed@gmail.com'))
 tardis.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 tardis.save!
 puts "✅ tardis"
 
-file = URI.open('https://res.cloudinary.com/dfei5iavr/image/upload/v1646209996/milennium_falcon_oahxuf.jpg')
+file = URI.open('https://res.cloudinary.com/dfei5iavr/image/upload/v1646471758/Millennium-Falcon-header1_hudoly.jpg')
 millenium_falcon = Spacecraft.new(name: 'Millennium Falcon', capacity: 10, category: 'smuggling ship', location: 'Republic City', description: 'The Millennium Falcon was  a YT-1300 light freifhter of the YT-1300f variety.', user: User.find_by(email: 'ch@gmail.com'))
 millenium_falcon.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 millenium_falcon.save!
