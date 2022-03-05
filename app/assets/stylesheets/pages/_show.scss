@@ -1,0 +1,30 @@
+.alert-space {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+.alert-space-info {
+  color: #EAC18C;
+  background-color: $info;
+  border-color: $info;
+}
+
+.alert-space-info a {
+  color: #EAC18C;
+  background-color: $info;
+  border-color: $info;
+}
+
+.alert-space-info a:hover {
+  text-decoration: none;
+  color: #e9af62;
+}
+
+#info {
+  height: 50vh;
+  position: sticky;
+  top: 20px;
+}
