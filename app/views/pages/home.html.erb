@@ -5,26 +5,28 @@
 <div class="container mt-5">
   <h2 class="mb-3">The last three spacecrafts</h2>
 
+  <section class="wrapper">
 
   <div class="row">
-    <div class="col-12 col-lg-6">
-      <% @spacecrafts.last(3).each do |spacecraft| %>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <%= cl_image_tag "#{spacecraft.photo.key}", class: "img-fluid rounded-start img-cover" %>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h4 class="card-title"><%= spacecraft.name %></h4>
-                <p class="card-text">
-                  <%= spacecraft.category %> <br/>
-                  <i class="fa-solid fa-users"></i> <%= spacecraft.capacity %>
-                </p>
-                <a class="btn btn-success" type="button" href="<%= spacecraft_path(spacecraft) %>">Voir le détail</a>
-              </div>
-            </div>
+    <% @spacecrafts.last(3).each do |spacecraft| %>
+ <div class="col-md-4"><div class="card text-white card-has-bg click-col" style="background-image:url('<%= cl_image_path "#{spacecraft.photo.key}"%>'); background-size: cover;">
+       <%= cl_image_tag "#{spacecraft.photo.key}", class: "card-img d-none" %>
+        <div class="card-img-overlay d-flex flex-column">
+         <div class="card-body">
+            <small class="card-meta mb-2 text-capitalize"><%= spacecraft.category %></small>
+            <h4 class="card-title mt-0 "><a class="text-white" href="<%= spacecraft_path(spacecraft) %>"><%= spacecraft.name %></a></h4>
+           <small><i class="fa-solid fa-users"></i> <%= spacecraft.capacity %></small>
+          </div>
+          <div class="card-footer">
+           <div class="media">
+  <div class="media-body">
+    <h6 class="my-0 text-white d-block"><%= spacecraft.user.nickname %></h6>
+     <small>Captain of this ship</small>
+  </div>
+</div>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div></div>
+<% end %>
+</div>
+</section>
