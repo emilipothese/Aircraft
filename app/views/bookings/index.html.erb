@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="col-12 col-md-6">
+    <h1>My Bookings</h1>
+      <p>
+        <ul class="list-group">
+          <% @bookings.each do |booking| %>
+            <li class="list-group-item mb-3">
+              <div class="row">
+                <p class="col-6"><b class="text-success">START DATE</b><br/><%= booking.start_date %></p>
+                <p class="col-6 border-start"><b class="text-success">END DATE</b><br/><%= booking.end_date %></p>
+              </div>
+              <hr class="mt-0">
+              <p><b class="text-success">SPACECRAFT</b><br/><%= booking.spacecraft.name %></p>
+            </li>
+          <% end %>
+        </ul>
+      </p>
+    </div>
+</div>
