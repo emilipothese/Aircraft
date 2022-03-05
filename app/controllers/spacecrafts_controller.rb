@@ -1,5 +1,7 @@
 class SpacecraftsController < ApplicationController
   before_action :set_spacecraft, only: [ :user, :show, :edit, :update, :destroy ]
+  skip_before_action :authenticate_user!, only: [ :home, :index, :show  ]
+
 
   def user
     @user = @spacecraft.user
